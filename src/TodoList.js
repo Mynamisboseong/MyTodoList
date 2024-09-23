@@ -1,16 +1,16 @@
-function TodoList(Params) {
+function TodoList($target, initialState) {
     const $todolist = document.createElement('div')
-    const $target = Params.$target
     $target.appendChild($todoList)
 
-    this.state = Params.initialState
+    this.state = initialState
 
     this.render = () => {
         $todolist.innerHTML = `
             <ul>
-                ${this.state.map(todo => `<li>${todo.text}</li>`).join}
+                ${this.state.map(({text}) => `<li>${text}</li>`).join('')}
             </ul>
         `
     }
+    
     this.render()
 }
