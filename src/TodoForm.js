@@ -8,6 +8,9 @@ function TodoForm({ $target }) {
             <input type = "text" name = "todo"/>
             <button>Add</button>
         `
+
+        //이벤트
+        $form.addEventListener("submit")
     }
 
     this.render()
