@@ -1,6 +1,6 @@
-function TodoList($target, initialState) {
+function TodoList({ $target, initialState }) {
     const $todolist = document.createElement('div')
-    $target.appendChild($todoList)
+    $target.appendChild($todolist)
 
     this.state = initialState
 

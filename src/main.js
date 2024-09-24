@@ -7,9 +7,33 @@ const data = [
     }
 ]
 
+//추가된 코드
+const data1 = [
+    {
+        text: '점심밥 챙겨먹기'
+    },
+    {
+        text: '저녁밥 챙겨먹기'
+    }
+]
+
 const $app = document.querySelector('.app')
+
+new Header({
+    $target: $app
+})
+
+new TodoForm({
+    $target: $app
+})
 
 new TodoList({
     $target: $app,
     initialState: data
+})
+
+//추가된 코드
+new TodoList({
+    $target: $app,
+    initialState: data1
 })
