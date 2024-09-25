@@ -19,8 +19,13 @@ function TodoForm({ $target, onSubmit }) {
             $form.addEventListener("submit", e => {
                 e.preventDefault()
 
-                const text = $form.querySelector('input[name = todo]').value
-                onSubmit(text)
+                const $input = $form.querySelector('input[name = todo]') 
+                const text = $input.value
+                
+                if (text.length > 2) {
+                    $input.value = ''
+                    onSubmit(text)
+                }
             })
         }
     }
