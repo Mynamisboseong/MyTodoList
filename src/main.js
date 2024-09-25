@@ -24,7 +24,12 @@ new Header({
 })
 
 new TodoForm({
-    $target: $app
+    $target: $app,
+    //onSubmit: 해당 속성에 코드설정 시 사용자가 폼을 제출할 때 해당 코드 실행
+    onSubmit: (text) => {
+        const nextState = [...todoList.state, { text }]
+        todoList.setState(nextState)
+    }
 })
 
 new TodoList({
@@ -33,7 +38,7 @@ new TodoList({
 })
 
 //추가된 코드
-new TodoList({
+const todoList = new TodoList({
     $target: $app,
     initialState: data1
 })
