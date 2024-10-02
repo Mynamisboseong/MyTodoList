@@ -1,5 +1,5 @@
 //form을 생성하는 부분
-function TodoForm({ $target, onSubmit }) {
+export default function TodoForm({ $target, onSubmit }) {
     const $form = document.createElement('form')
     $target.appendChild($form)
 
