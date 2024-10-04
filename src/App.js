@@ -4,7 +4,7 @@ import TodoList from "./TodoList.js"
 import { setItem } from './storage.js'
 
 export default function App({ $target, initialState }) {
-    new Headers({
+    new Header({
         $target, text: 'Mynamisboseong TodoList'
     })
     
